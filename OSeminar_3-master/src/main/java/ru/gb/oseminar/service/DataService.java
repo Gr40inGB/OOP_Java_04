@@ -30,7 +30,7 @@ public class DataService {
         }
         countMaxId++;
 
-        Student student = new Student(firstName, secondName, patronymic, dateOfBirth, countMaxId);
+        Student student = new Student(countMaxId, firstName, secondName, patronymic, dateOfBirth);
         this.users.add(student);
     }
 }
