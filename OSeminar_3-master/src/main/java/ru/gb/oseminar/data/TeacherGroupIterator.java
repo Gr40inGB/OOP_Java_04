@@ -3,27 +3,26 @@ package main.java.ru.gb.oseminar.data;
 import java.util.Iterator;
 import java.util.List;
 
-public class StudentGroupIterator implements Iterator<Student> {
-
+public class TeacherGroupIterator implements Iterator<Teacher> {
     private int counter;
-    private final List<Student> students;
+    private final List<Teacher> teachers;
 
-    public StudentGroupIterator(StudentGroup studentGroup) {
-        this.students = studentGroup.getStudents();
+    public TeacherGroupIterator(TeacherGroup teacherGroup) {
+        this.teachers = teacherGroup.getTeacherList();
         this.counter = 0;
     }
 
     @Override
     public boolean hasNext() {
-        return counter < students.size();
+        return counter < teachers.size();
     }
 
     @Override
-    public Student next() {
+    public Teacher next() {
         if (!hasNext()){
-            throw new RuntimeException("Students");
+            throw new RuntimeException("Teacher");
         }
 
-        return students.get(counter++);
+        return teachers.get(counter++);
     }
 }

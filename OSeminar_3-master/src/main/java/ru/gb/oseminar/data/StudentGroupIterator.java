@@ -23,7 +23,6 @@ public class StudentGroupIterator implements Iterator<Student> {
         if (!hasNext()){
             throw new RuntimeException("Students");
         }
-
         return students.get(counter++);
     }
 }

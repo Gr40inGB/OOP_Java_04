@@ -49,13 +49,9 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" +
-               "firstName='" + firstName + '\'' +
-               ", secondName='" + secondName + '\'' +
-               ", patronymic='" + patronymic + '\'' +
-               ", dateOfBirth=" + dateOfBirth +
-               '}';
+        return firstName + " " + secondName + " " + patronymic + " " + dateOfBirth;
     }
+
 
     @Override
     public boolean equals(Object o) {

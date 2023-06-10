@@ -2,12 +2,11 @@ package main.java.ru.gb.oseminar.data;
 
 import java.time.LocalDate;
 
-public class Student extends User implements Comparable<Student>{
+public class Student extends User implements Comparable<Student> {
     private Long studentId;
 
 
-
-    public Student(long studentId,String firstName, String secondName,
+    public Student(long studentId, String firstName, String secondName,
                    String patronymic, LocalDate dateOfBirth) {
         super(firstName, secondName, patronymic, dateOfBirth);
         this.studentId = studentId;
@@ -22,20 +21,18 @@ public class Student extends User implements Comparable<Student>{
     }
 
 
-
     @Override
     public String toString() {
-        return "Student{" +
-               "studentId='" + studentId +'\'' +
-               ", firstName='" + super.getFirstName() + '\'' +
-               ", secondName='" + super.getSecondName() + '\'' +
-               ", patronymic='" + super.getPatronymic() + '\'' +
-               ", dateOfBirth=" + super.getDateOfBirth() +
-               '}';
+        return "Student " + studentId + " " + super.toString();
     }
 
     @Override
     public int compareTo(Student o) {
         return this.studentId.compareTo(o.studentId);
     }
+
+//    @Override
+//    public int compareTo(Student o) {
+//
+//    }
 }
